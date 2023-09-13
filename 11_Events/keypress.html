@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyPress_Event</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: #2a364f;
+            color: white;
+            font-size: 20px;
+        }
+        .main-div{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .box{
+            width: 80vw;
+            display: grid;
+            place-items: center;
+            font-size: 30px;
+        }
+        input{
+            width: 500px;
+            padding: 20px 50px;
+            border-radius: 20px;
+            font-size: 20px;
+            box-shadow: 0 10px 8px -8px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div class="box">
+            <p>A Function is triggered when the user is pressing a key in the input feild</p>
+            <br>
+            <input type="text" onkeypress="keyPress()" onkeydown="keyDown()" onkeyup="keyUp()">
+            <br>
+            <p id="keys"></p>
+        </div>
+    </div>
+
+    <script>
+        
+        keyPress = () =>{
+            document.getElementById('keys').innerHTML = `you press ${event.key} and it's code is ${event.code}`;
+        }
+
+
+
+        // better to use 2nd and Third one:
+
+        keyDown = () =>{
+            document.getElementById('keys').innerHTML = `key is Down`;
+            // when we click backslash to delete the it will run
+        }
+
+
+        keyUp = () =>{
+            document.getElementById('keys').innerHTML = `key is Up`;
+            // when we click backslash to delete the it will run
+        }
+        
+
+    </script>
+</body>
+</html>

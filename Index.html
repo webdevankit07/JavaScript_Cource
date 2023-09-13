@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JavaScript</title>
+        <style>
+            button {
+                font-size: 25px;
+                color: red;
+                margin: 20px 40px;
+                padding: 10px 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Click the button to display a date.</h1>
+        <button onclick="myFunction()">Click Me</button>
+        <h1 id="demo"></h1>
+
+        <!-- <script src="/1_Naming_Variables.js"></script> -->
+        <!-- <script src="/2_DataTypes.js"></script> -->
+        <!-- <script src="/3_ExpressionOperators.js"></script> -->
+        <!-- <script src="/4_Control_Statments_and_Loops.js"></script> -->
+        <!-- <script src="/5_Functions.js"></script> -->
+        <!-- <script src="/5.1_EcmaScript.js"></script> -->
+        <!-- <script src="/6_Arrays.js"></script> -->
+        <!-- <script src="/7_String.js"></script> -->
+        <!-- <script src="/8_Date_Time_In_JavaScript.js"></script> -->
+        <!-- <script src="/9_MathObject.js"></script> -->
+        <!-- <script src="/13_OOPS.js"></script> -->
+        <!-- <script src="/ChallengeTime.js.js"></script> -->
+        <!-- <script src="/InterviewQuestions.js"></script> -->
+
+        <script>
+            myFunction = () => {
+                setInterval(() => {
+                    let date = new Date().toString();
+                    document.getElementById('demo').innerHTML = date;
+                }, 1000);
+            };
+        </script>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval()</title>
+    <style>
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: #2a364f;
+            box-sizing: border-box;
+        }
+        p{
+            color: white;
+            font-size: 30px;
+            display: block;
+        }
+        button{
+            display: block;
+            box-shadow: 0px 10px 8px -8px rgba(0, 0, 0, 0.6);
+            border: none;
+            background-color: #F8B627;
+            color: #000000;
+            font-size: 16px;
+            font-weight: normal;
+            width: 132px;
+            text-align: center;
+            border-radius: 3px;
+            transition: 400ms;
+            text-decoration: none;
+            padding: 15px 22px;
+            z-index: 100000;
+        }
+        .flex{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-div">
+        <div class="flex">
+             <p>let's Start Countdown</p>
+            <button id="btn">click here</button>
+        </div>
+    </div>
+
+    <script>
+
+        const myNum = document.querySelector('p');
+        const btn = document.querySelector('#btn');
+        let num = 1;
+
+
+        btn.addEventListener('click', () =>{
+            myNum.innerHTML = `Loading...`;
+            setInterval(() => {
+                myNum.innerHTML = `${num}`;
+                num++
+            }, 1000);
+        })
+
+    </script>
+
+</body>
+</html>

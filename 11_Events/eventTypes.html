@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventTypes</title>
+    <style>
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: #2a364f;
+        }
+        h1{
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .credit{
+            text-align: center;
+            color: rgba(255, 255, 255, 0.4);
+        }
+        .content{
+            padding-top: 45px;
+            padding-bottom: 20px;
+        }
+        .button_container{
+            width: 176px;
+            margin: 0 auto;
+            margin-top: 30px;
+            padding-top: 40px;
+        }
+        .button_su{
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            border-radius: 3px;
+            margin-bottom: 30px;
+            box-shadow: 0px 10px 8px -8px rgba(0, 0, 0, 0.6);
+        }
+        .su_button_circle{
+            background-color: red;
+            border-radius: 1000px;
+            position: absolute;
+            left: 0;top: 0;
+            width: 0;height: 0;
+            margin-left: 0;margin-top: 0;
+            pointer-events: none;
+        }
+        .button_su_inner{
+            display: inline-block;
+            background-color: #F8B627;
+            color: #F4F4F4;
+            font-size: 16px;
+            font-weight: normal;
+            width: 132px;
+            text-align: center;
+            border-radius: 3px;
+            transition: 400ms;
+            text-decoration: none;
+            padding: 22px;
+            z-index: 100000;
+        }
+        .button_text_container{
+            position: relative;
+            z-index: 10000;
+        }
+        .explode-circle{
+            animation: explode 0.5s forwards;
+        }
+        .desplode-circle{
+            animation: desplode 0.5s forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Different Types Of Events In JavaScript</h1>
+        <div class="button_container">
+
+            <!-- inline-Events -->
+            <div class="button_su">
+                <span class="su_button_circle"></span>
+                <a href="#" class="button_su_inner" onclick="alert('I am awesome, But no One Use me')">
+                    <span class="button_text_container">
+                        simple inline alert()
+                    </span>
+                </a>
+            </div>
+
+
+
+            <!-- By-Calling A function -->
+            <div class="button_su">
+                <span class="su_button_circle"></span>
+                <a href="#" class="button_su_inner" onclick="callingFunction()">
+                    <span class="button_text_container">
+                        By calling a Function.
+                    </span>
+                </a>
+            </div>
+
+
+
+            <!-- By-using-elements -->
+            <div class="button_su">
+                <span class="su_button_circle"></span>
+                <a href="#" class="button_su_inner" id="thirdWay">
+                    <span class="button_text_container">
+                        Inline Event
+                    </span>
+                </a>
+            </div>
+
+
+
+
+
+            <!-- addEventListener -->
+            <div class="button_su">
+                <span class="su_button_circle"></span>
+                <a href="#" class="button_su_inner" id="fourthWay">
+                    <span class="button_text_container">
+                        Event Listeners
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+        // 2nd Way of writting Function:
+        const callingFunction = () => {
+            alert('Most common way of writing function');
+        }
+
+
+
+
+
+        // 3rd way of writting Function:
+        const thirdWay = document.getElementById('thirdWay');
+
+        thirdWay.onclick = () => {
+            alert('Most common way of writing function Again.');
+        }
+
+        // thirdWay.onclick = () => {
+        //     console.log('Most common way of writing function Again.');
+        // }
+
+        
+
+
+
+
+
+
+
+
+        
+        // 4th way of writting Function:
+        const fourthway = document.querySelector('#fourthWay');
+
+        fourthway.addEventListener('click', () => {
+            alert('I love the way of wrtting Function like this.');
+        });
+
+        // fourthway.addEventListener('click', () => {
+        //     console.log('I love the way of wrtting Function like this.');
+        // });
+
+    </script>
+</body>
+</html>

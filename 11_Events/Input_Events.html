@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input_Events</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background: #2a364f;
+            color: white;
+            font-size: 20px;
+        }
+        .main-div{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .box{
+            font-size: 30px;
+            margin: auto;
+        }
+        input{
+            width: 500px;
+            padding: 20px 50px;
+            margin: 20px 0;
+            border-radius: 20px;
+            font-size: 20px;
+        }
+        select{
+            width: 200px;
+            padding: 10px 20px;
+            font-size: 20px;
+        }
+        #ice{
+            font-size: 20px;
+        }
+        button{
+            display: inline-block;
+            background-color: #f86927;
+            border: none;
+            box-shadow: 0 10px 8px -8px rgba(0, 0, 0, 0.6);
+            color: #F4F4F4;
+            font-size: 16px;
+            font-weight: normal;
+            width: 132px;
+            text-align: center;
+            border-radius: 3px;
+            transition: 400ms;
+            text-decoration: none;
+            padding: 10px 20px;
+            z-index: 100000;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div class="box">
+            <label for="">Your Name</label>
+            <input type="text" id="myName">
+            <br>
+
+            <label for="">Choosen an ice cream flavour
+                <!-- <select  id="iceCream" onchange="selectElement()"> -->
+                <select  class="select_flavour" id="flavour">
+                    <option value="Cool">select One</option>
+                    <option value="Choclate">Choclate</option>
+                    <option value="Sardine">Sardine</option>
+                    <option value="Vanilla">Vanilla</option>
+                </select>
+            </label>
+            <button id="click">Submit</button>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script>
+
+        // const selectElement = () =>{
+        //     const inputChange = document.getElementById('ice').value;
+        //     const iceCream = document.getElementById('iceCream').value;
+
+        //     console.log(`Mr. ${inputChange} select ${iceCream} Ice-cream Flavour`);
+
+        //     document.querySelector('#result').innerHTML = `Mr. ${inputChange} select ${iceCream} Ice-cream Flavour`;
+        // }
+
+
+
+
+
+
+
+        
+
+        // const select = document.querySelector('.select_flavour');
+
+        // select.addEventListener('change', () =>{
+        //     const myName = document.getElementById('myName').value;
+        //     const flavour = document.getElementById('flavour').value;
+
+        //     console.log(`Mr. ${myName} select ${flavour} Ice-cream Flavour`);
+
+        //     document.querySelector('#result').innerHTML = `Mr. ${myName} select ${flavour} Ice-cream Flavour`;
+        // });
+
+
+
+
+
+
+
+
+
+        //  Submit - click_button
+        const click_button = document.querySelector('#click');
+
+        click_button.addEventListener('click', () =>{
+            const myName = document.getElementById('myName').value;
+            const flavour = document.getElementById('flavour').value;
+
+            console.log(`Mr. ${myName} select ${flavour} Ice-cream Flavour`);
+
+            document.querySelector('#result').innerHTML = `Mr. ${myName} select ${flavour} Ice-cream Flavour`;
+        })
+
+    </script>
+</body>
+</html>
